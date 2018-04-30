@@ -1,0 +1,42 @@
+CREATE
+    http://localhost:3000/todo
+    method : POST
+    JSON RAW :
+    {
+        "name" : "hura hura",
+        "priority" : "3",
+        "location" : "Di Bandung",
+        "time_start" : "20:20:20",
+        "username" : "tendi",
+        "password" : "tendiPassword"
+    }
++++ Auth In delete and Update can be in query url or json raw data
+UPDATE
+    http://localhost:3000/todo/:activity_id?username=tendi&password=tendiPassword
+    method : PUT
+    JSON RAW :
+    {
+        "name" : "hura hura edited",
+        "priority" : "3",
+        "location" : "Di Bandung",
+        "time_start" : "20:20:20",
+        "username" : "tendi",
+        "password" : "tendiPassword"
+    }
+
+DELETE
+    http://localhost:3000/todo/:activity_id?username=tendi&password=tendiPassword
+    method: DELETE
+
+GET
+    http://localhost:3000/todo?username=tendi&password=tendiPasswords
+    method: GET
+    desc : get all data
+
+    http://localhost:3000/todo?priority=:(DESC || ASC)?username=tendi&password=tendiPassword
+    method: GET
+    desc : sorting by priority ASC or DESC
+    
+    http://localhost:3000/todo/:activity_id?username=tendi&password=tendiPassword
+    method: GET
+    desc : get single data
