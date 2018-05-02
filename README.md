@@ -10,8 +10,8 @@ just personal project for learn node and express
 
 http://localhost:3000/todo/1?username=tendi&password=tendiPassword
 
-GUIDE
-
+# GUIDE
+```
 CREATE
     http://localhost:3000/todo
     method : POST
@@ -24,7 +24,9 @@ CREATE
         "username" : "tendi",
         "password" : "tendiPassword"
     }
-+++ Auth In delete and Update can be in query url or json raw data
+```    
+# Auth In delete and Update can be in query url or json raw data
+```
 UPDATE
     http://localhost:3000/todo/:activity_id?username=tendi&password=tendiPassword
     method : PUT
@@ -37,11 +39,14 @@ UPDATE
         "username" : "tendi",
         "password" : "tendiPassword"
     }
+```
 
+```
 DELETE
     http://localhost:3000/todo/:activity_id?username=tendi&password=tendiPassword
     method: DELETE
-
+```
+```
 GET
     http://localhost:3000/todo?username=tendi&password=tendiPasswords
     method: GET
@@ -54,3 +59,4 @@ GET
     http://localhost:3000/todo/:activity_id?username=tendi&password=tendiPassword
     method: GET
     desc : get single data
+```
